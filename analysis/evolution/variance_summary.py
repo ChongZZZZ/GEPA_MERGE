@@ -201,15 +201,17 @@ def qwen_score(task: str, cfg: str, seed: int) -> float | None:
         if cfg == "adaptive":
             p = QWEN_ADAPTIVE_S0[task] / "test_eval.json"
             return score_from_json(p)
-        # For nomerge: the adaptive-run waves include their own matched s=0
-        # nomerge baseline (e.g. `sec6_behavioral_probe/qwen3-8b/2wiki/nomerge_s0/`).
-        # Figure 4 / Table 7 use that as the baseline for the adaptive Δs=0,
-        # so prefer it over the configuration-sweep s=0 nomerge (which was a
-        # separate, earlier run with its own seed). For non-nomerge configs
-        # we still want the configuration-sweep cell.
+        # Prefer the sec4 configuration-sweep nomerge_s0 (the matched
+        # baseline used by Tables 3, 7, 8 in the paper). Fall back to the
+        # behavioral-probe nomerge_s0 only when the sweep cell is missing.
+        cfg_full = QWEN_S0_CFG_NAME.get(cfg)
+        if cfg_full:
+            p = QWEN_S0_ROOT[task] / f"{cfg_full}_s0" / "test_eval.json"
+            v = score_from_json(p)
+            if v is not None:
+                return v
         if cfg == "nomerge":
-            cfg_full = QWEN_CFG_ABBREV[cfg]
-            p_json = QWEN_PROBE_RUNS_ROOT / task / f"{cfg_full}_s0" / "test_eval.json"
+            p_json = QWEN_PROBE_RUNS_ROOT / task / f"nomerge_s0" / "test_eval.json"
             if p_json.exists():
                 v = score_from_json(p_json)
                 if v is not None:
@@ -219,12 +221,6 @@ def qwen_score(task: str, cfg: str, seed: int) -> float | None:
                 v = score_from_csv(p_csv)
                 if v is not None:
                     return v
-        cfg_full = QWEN_S0_CFG_NAME.get(cfg)
-        if cfg_full:
-            p = QWEN_S0_ROOT[task] / f"{cfg_full}_s0" / "test_eval.json"
-            v = score_from_json(p)
-            if v is not None:
-                return v
         return None
 
     # seed >= 1
