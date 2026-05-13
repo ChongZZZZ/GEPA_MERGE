@@ -1,0 +1,14 @@
+{
+  "run_dir": "P3_result/phase_a_main/hover/nomerge_s0",
+  "task": "hover",
+  "model": "openrouter/qwen/qwen3-8b",
+  "reflection_lm": "openrouter/qwen/qwen3-8b",
+  "config": {
+    "use_merge": false,
+    "merge_algorithm": "original",
+    "merge_start": "immediate"
+  },
+  "test_score": 47.67,
+  "n_test": 300,
+  "status": "ok"
+}

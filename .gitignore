@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.venv/
+venv/
+.python-version
+
+# Local env
+.env
+.env.local
+.env.*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Vendored heavy data — these are symlinks on the original machine.
+# Regenerate via experiments/warmup_wiki_corpus.py (≈608 MB download, ~15 min).
+experiments/vendor/gepa-artifact/gepa_artifact/benchmarks/hover/wiki.abstracts.2017.jsonl
+experiments/vendor/gepa-artifact/gepa_artifact/benchmarks/hover/bm25s_retriever/
+experiments/vendor/gepa-artifact/gepa_artifact/benchmarks/hover/retriever_cache/
+
+# IFBench prebuilt corpus duplicates (regenerated at runtime)
+experiments/vendor/gepa-artifact/gepa_artifact/benchmarks/IFBench/data/_cache/
+
+# Smoke / scratch run outputs
+smoke_runs/
+runs/

@@ -1,0 +1,5 @@
+run_dir,task,model,reflection_lm,config,test_score,n_test,status
+adaptive_merge/runs/qwen_hotpotqa_adaptive_s0,hotpotqa,qwen/qwen3-8b,qwen/qwen3-8b,"{'use_merge': True, 'merge_algorithm': 'original', 'merge_start': 'immediate'}",51.0,300,ok
+adaptive_merge/runs/qwen_hover_adaptive_s0,hover,qwen/qwen3-8b,qwen/qwen3-8b,"{'use_merge': True, 'merge_algorithm': 'original', 'merge_start': 'immediate'}",45.0,300,ok
+adaptive_merge/runs/qwen_ifbench_adaptive_s0,ifbench,qwen/qwen3-8b,qwen/qwen3-8b,"{'use_merge': True, 'merge_algorithm': 'original', 'merge_start': 'immediate'}",35.54,294,ok
+adaptive_merge/runs/qwen_musique_adaptive_s0,musique,qwen/qwen3-8b,qwen/qwen3-8b,"{'use_merge': True, 'merge_algorithm': 'original', 'merge_start': 'immediate'}",51.67,300,ok

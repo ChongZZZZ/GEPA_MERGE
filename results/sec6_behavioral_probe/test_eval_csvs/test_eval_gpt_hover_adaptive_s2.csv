@@ -1,0 +1,2 @@
+run_dir,task,model,reflection_lm,config,test_score,n_test,status
+adaptive_merge/paper_final/p1/runs/gpt_hover_adaptive_s2,hover,openai/gpt-4.1-mini,openai/gpt-4.1-mini,"{'use_merge': True, 'merge_algorithm': 'original', 'merge_start': 'immediate'}",50.33,300,ok

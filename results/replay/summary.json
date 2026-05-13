@@ -1,0 +1,65 @@
+[
+  {
+    "variant": "G3_off",
+    "total_events": 296,
+    "skips": 245,
+    "skip_rate": 0.8277027027027027,
+    "skip_reasons": {
+      "G1_parent_strength": 181,
+      "G2_behavioral_complementarity": 64
+    },
+    "algo_counts": {
+      "summarize_before": 43,
+      "combine_all": 6,
+      "original": 2
+    },
+    "algo_reasons": {
+      "bloat_risk_growth_over_safe_ratio": 38,
+      "safe_complementary_combine_all": 6,
+      "near_duplicate": 2,
+      "bloat_risk_predictor_over_LMAX": 3,
+      "specialization_split": 2
+    },
+    "g3_unavailable": 0,
+    "actual_accepted": 234,
+    "actual_rejected": 62,
+    "accepted_skipped_by_policy": 197,
+    "rejected_skipped_by_policy": 48,
+    "catastrophic_events": 10,
+    "catastrophic_skipped": 9,
+    "catastrophic_routed_to_summarize": 1,
+    "catastrophic_addressed": 10
+  },
+  {
+    "variant": "G3_on",
+    "total_events": 296,
+    "skips": 250,
+    "skip_rate": 0.8445945945945946,
+    "skip_reasons": {
+      "G1_parent_strength": 181,
+      "G2_behavioral_complementarity": 64,
+      "G3_maturity_imbalance": 5
+    },
+    "algo_counts": {
+      "summarize_before": 38,
+      "combine_all": 6,
+      "original": 2
+    },
+    "algo_reasons": {
+      "bloat_risk_growth_over_safe_ratio": 34,
+      "safe_complementary_combine_all": 6,
+      "near_duplicate": 2,
+      "bloat_risk_predictor_over_LMAX": 3,
+      "specialization_split": 1
+    },
+    "g3_unavailable": 0,
+    "actual_accepted": 234,
+    "actual_rejected": 62,
+    "accepted_skipped_by_policy": 200,
+    "rejected_skipped_by_policy": 50,
+    "catastrophic_events": 10,
+    "catastrophic_skipped": 9,
+    "catastrophic_routed_to_summarize": 1,
+    "catastrophic_addressed": 10
+  }
+]

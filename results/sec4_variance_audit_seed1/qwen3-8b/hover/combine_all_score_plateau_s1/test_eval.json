@@ -1,0 +1,14 @@
+{
+  "run_dir": "adaptive_merge/runs_phase_a_seed1/qwen_hover_combine_plat_s1",
+  "task": "hover",
+  "model": "qwen/qwen3-8b",
+  "reflection_lm": "qwen/qwen3-8b",
+  "config": {
+    "use_merge": true,
+    "merge_algorithm": "combine_all",
+    "merge_start": "score_plateau"
+  },
+  "test_score": 46.33,
+  "n_test": 300,
+  "status": "ok"
+}

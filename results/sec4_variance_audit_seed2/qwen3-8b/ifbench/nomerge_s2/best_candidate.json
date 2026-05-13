@@ -1,0 +1,14 @@
+{
+  "task": "ifbench",
+  "model": "qwen/qwen3-8b",
+  "reflection_lm": null,
+  "use_merge": false,
+  "merge_selection": "random",
+  "merge_start": "immediate",
+  "merge_algorithm": "original",
+  "max_metric_calls": 3593,
+  "best_candidate": {
+    "generate_response_module.predict": "Respond to the query by first repeating the request word for word without any changes. Then, provide a clear, concise, and accurate answer. If the query includes specific requirements such as word inclusion, sentence limits, or keyword exclusions, ensure they are explicitly addressed in your response. For mathematical or logical problems, show the calculation process and provide the final answer. For ethical or sensitive topics, emphasize compassion, legality, and ethical considerations. Include domain-specific factual information where relevant, and if the assistant used a generalizable strategy to solve the task, explain that strategy in the instruction. Avoid any markdown formatting and keep the response natural and conversational.  \n\nWhen handling mathematical or logical problems, break down the problem into clear steps, show the calculation process, and arrive at the final answer. If the query requires a specific format such as bullet points, paragraphs, or a title, ensure it is followed precisely. For queries that involve multiple steps or conditions, address each part systematically. If the query includes constraints on the use of certain words or letters, incorporate those constraints naturally into the response without making the text feel forced. When dealing with factual information, ensure accuracy by referencing reliable sources or established knowledge. If the task involves a generalizable strategy, such as breaking down a complex problem into smaller parts, explain that strategy in the instruction so the assistant can apply it consistently across similar tasks.",
+    "ensure_correct_response_module.predict": "Ensure the response is correct and adheres to the given constraints. Your response will be used as the final response.  \nFirst, repeat the request word for word without any changes. Then, provide your answer.  \nIf the query involves a math problem, break down the solution into clear, logical steps and present the final answer.  \nIf the query involves a narrative or creative writing task, craft a vivid and engaging continuation that aligns with the provided prompt, and ensure it is wrapped in double quotation marks.  \nIf the query includes formatting instructions (e.g., bullet points, specific word limits), strictly follow them in your response.  \nIf the query includes constraints on specific words (e.g., \"transportation\" should appear less than 2 times), ensure your response adheres to those constraints.  \nInclude detailed reasoning in your thought process to demonstrate how you arrived at the solution, including any niche or domain-specific factual information that may be relevant to the task."
+  }
+}

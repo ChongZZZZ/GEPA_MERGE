@@ -1,0 +1,2 @@
+run_dir,task,model,reflection_lm,config,test_score,n_test,status
+/Users/zhaochong/Desktop/NLP_Project/gepa_merge/adaptive_merge/paper_final/p4/runs/qwen_hotpotqa_adaptive_s2,hotpotqa,qwen/qwen3-8b,qwen/qwen3-8b,"{'use_merge': True, 'merge_algorithm': 'original', 'merge_start': 'immediate'}",48.67,300,ok

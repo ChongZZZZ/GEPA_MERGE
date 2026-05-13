@@ -1,0 +1,14 @@
+{
+  "run_dir": "runs/musique/gpt41mini/nomerge_s0",
+  "task": "musique",
+  "model": "openrouter/openai/gpt-4.1-mini",
+  "reflection_lm": "openrouter/openai/gpt-4.1-mini",
+  "config": {
+    "use_merge": false,
+    "merge_algorithm": "original",
+    "merge_start": "immediate"
+  },
+  "test_score": 51.33,
+  "n_test": 300,
+  "status": "ok"
+}

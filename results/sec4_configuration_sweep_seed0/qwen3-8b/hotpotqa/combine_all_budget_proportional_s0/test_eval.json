@@ -1,0 +1,14 @@
+{
+  "run_dir": "P4_result/phase_a_main/hotpotqa/combine_all_budget_proportional_s0",
+  "task": "hotpotqa",
+  "model": "openrouter/qwen/qwen3-8b",
+  "reflection_lm": "openrouter/qwen/qwen3-8b",
+  "config": {
+    "use_merge": true,
+    "merge_algorithm": "combine_all",
+    "merge_start": "budget_proportional"
+  },
+  "test_score": 48.67,
+  "n_test": 300,
+  "status": "ok"
+}

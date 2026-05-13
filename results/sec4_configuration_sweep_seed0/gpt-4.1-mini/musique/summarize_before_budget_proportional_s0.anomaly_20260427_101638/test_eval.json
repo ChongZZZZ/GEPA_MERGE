@@ -1,0 +1,14 @@
+{
+  "run_dir": "runs/musique/gpt41mini/summarize_before_budget_proportional_s0.anomaly_20260427_101638",
+  "task": "musique",
+  "model": "openrouter/openai/gpt-4.1-mini",
+  "reflection_lm": "openai/gpt-4.1-mini",
+  "config": {
+    "use_merge": true,
+    "merge_algorithm": "summarize_before",
+    "merge_start": "budget_proportional"
+  },
+  "test_score": 32.0,
+  "n_test": 300,
+  "status": "ok"
+}

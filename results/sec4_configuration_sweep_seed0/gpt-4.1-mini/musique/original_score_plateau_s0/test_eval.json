@@ -1,0 +1,14 @@
+{
+  "run_dir": "runs/musique/gpt41mini/original_score_plateau_s0",
+  "task": "musique",
+  "model": "openrouter/openai/gpt-4.1-mini",
+  "reflection_lm": "openai/gpt-4.1-mini",
+  "config": {
+    "use_merge": true,
+    "merge_algorithm": "original",
+    "merge_start": "score_plateau"
+  },
+  "test_score": 57.67,
+  "n_test": 300,
+  "status": "ok"
+}

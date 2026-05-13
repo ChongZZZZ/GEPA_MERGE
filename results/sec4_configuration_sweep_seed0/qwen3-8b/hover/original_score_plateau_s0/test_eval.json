@@ -1,0 +1,14 @@
+{
+  "run_dir": "P3_result/phase_a_main/hover/original_score_plateau_s0",
+  "task": "hover",
+  "model": "openrouter/qwen/qwen3-8b",
+  "reflection_lm": "openrouter/qwen/qwen3-8b",
+  "config": {
+    "use_merge": true,
+    "merge_algorithm": "original",
+    "merge_start": "score_plateau"
+  },
+  "test_score": 48.0,
+  "n_test": 300,
+  "status": "ok"
+}

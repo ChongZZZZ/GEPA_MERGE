@@ -1,0 +1,14 @@
+{
+  "run_dir": "P2_result/phase_a_main/ifbench/summarize_before_immediate_s0",
+  "task": "ifbench",
+  "model": "openai/gpt-4.1-mini",
+  "reflection_lm": "openai/gpt-4.1-mini",
+  "config": {
+    "use_merge": true,
+    "merge_algorithm": "summarize_before",
+    "merge_start": "immediate"
+  },
+  "test_score": 52.21,
+  "n_test": 294,
+  "status": "ok"
+}

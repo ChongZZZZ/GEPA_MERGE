@@ -1,0 +1,14 @@
+{
+  "run_dir": "adaptive_merge/paper_final/p4/runs/qwen_2wiki_orig_bp_s2",
+  "task": "2wiki",
+  "model": "qwen/qwen3-8b",
+  "reflection_lm": "qwen/qwen3-8b",
+  "config": {
+    "use_merge": true,
+    "merge_algorithm": "original",
+    "merge_start": "budget_proportional"
+  },
+  "test_score": 81.33,
+  "n_test": 300,
+  "status": "ok"
+}

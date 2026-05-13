@@ -1,0 +1,14 @@
+{
+  "run_dir": "P4_result/phase_a_main/hotpotqa/combine_all_immediate_s0",
+  "task": "hotpotqa",
+  "model": "openrouter/qwen/qwen3-8b",
+  "reflection_lm": "openrouter/qwen/qwen3-8b",
+  "config": {
+    "use_merge": true,
+    "merge_algorithm": "combine_all",
+    "merge_start": "immediate"
+  },
+  "test_score": 52.0,
+  "n_test": 300,
+  "status": "ok"
+}

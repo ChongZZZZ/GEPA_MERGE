@@ -1,0 +1,14 @@
+{
+  "run_dir": "runs/musique/gpt41mini/combine_all_budget_proportional_s0",
+  "task": "musique",
+  "model": "openrouter/openai/gpt-4.1-mini",
+  "reflection_lm": "openrouter/openai/gpt-4.1-mini",
+  "config": {
+    "use_merge": true,
+    "merge_algorithm": "combine_all",
+    "merge_start": "budget_proportional"
+  },
+  "test_score": 53.33,
+  "n_test": 300,
+  "status": "ok"
+}

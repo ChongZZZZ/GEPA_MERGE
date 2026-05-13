@@ -1,0 +1,14 @@
+{
+  "run_dir": "runs/phase_a_main/2wiki/combine_all_score_plateau_s0",
+  "task": "2wiki",
+  "model": "openai/gpt-4.1-mini",
+  "reflection_lm": "openai/gpt-4.1-mini",
+  "config": {
+    "use_merge": true,
+    "merge_algorithm": "combine_all",
+    "merge_start": "score_plateau"
+  },
+  "test_score": 84.33,
+  "n_test": 300,
+  "status": "ok"
+}

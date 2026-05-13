@@ -1,0 +1,14 @@
+{
+  "run_dir": "adaptive_merge/runs_gpt_v2_first/gpt_musique_adaptive_s0",
+  "task": "musique",
+  "model": "openai/gpt-4.1-mini",
+  "reflection_lm": "openai/gpt-4.1-mini",
+  "config": {
+    "use_merge": true,
+    "merge_algorithm": "original",
+    "merge_start": "immediate"
+  },
+  "test_score": 53.0,
+  "n_test": 300,
+  "status": "ok"
+}

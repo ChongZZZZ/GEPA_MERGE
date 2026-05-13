@@ -1,0 +1,14 @@
+{
+  "run_dir": "P1_result/phase_a_main/hover/summarize_before_budget_proportional_s0",
+  "task": "hover",
+  "model": "openrouter/openai/gpt-4.1-mini",
+  "reflection_lm": "openai/gpt-4.1-mini",
+  "config": {
+    "use_merge": true,
+    "merge_algorithm": "summarize_before",
+    "merge_start": "budget_proportional"
+  },
+  "test_score": 48.67,
+  "n_test": 300,
+  "status": "ok"
+}

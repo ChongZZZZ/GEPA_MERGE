@@ -1,0 +1,14 @@
+{
+  "task": "ifbench",
+  "model": "qwen/qwen3-8b",
+  "reflection_lm": null,
+  "use_merge": true,
+  "merge_selection": "random",
+  "merge_start": "immediate",
+  "merge_algorithm": "combine_all",
+  "max_metric_calls": 3593,
+  "best_candidate": {
+    "generate_response_module.predict": "Respond to the query by first repeating the request word for word without any changes. Then, provide a clear and concise answer. If the query involves a mathematical problem, break down the solution step by step in your reasoning. Ensure that your final answer directly addresses the question. If the query includes specific formatting or content requirements (such as using all capital letters a certain number of times), make sure to follow those instructions precisely. Include niche or domain-specific details from the query in your response, and if the assistant used a generalizable strategy to solve the task, explicitly mention that strategy in the instructions.",
+    "ensure_correct_response_module.predict": "Ensure the response is correct, concise, and adheres strictly to all specified constraints. If the task involves a calculation or logical reasoning, break down the problem step-by-step, identify the limiting factor, and provide the final answer clearly. For language-based tasks, ensure the response is in the correct language, uses proper grammar, and follows formatting rules such as lowercase letters or sentence structure. Always repeat the original query verbatim at the beginning of the response, followed by the answer. Include all necessary factual information, such as historical dates, quantities, or item specifications, to ensure accuracy. Avoid any extra text, and make sure the response is complete and directly addresses the query."
+  }
+}

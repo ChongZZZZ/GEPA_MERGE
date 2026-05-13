@@ -1,0 +1,14 @@
+{
+  "run_dir": "P1_result/phase_a_main/hover/original_immediate_s0",
+  "task": "hover",
+  "model": "openrouter/openai/gpt-4.1-mini",
+  "reflection_lm": "openai/openai/gpt-4.1-mini",
+  "config": {
+    "use_merge": true,
+    "merge_algorithm": "original",
+    "merge_start": "immediate"
+  },
+  "test_score": 47.33,
+  "n_test": 300,
+  "status": "ok"
+}

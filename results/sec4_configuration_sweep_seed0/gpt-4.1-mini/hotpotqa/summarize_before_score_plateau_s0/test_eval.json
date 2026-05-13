@@ -1,0 +1,14 @@
+{
+  "run_dir": "P2_result/phase_a_main/hotpotqa/summarize_before_score_plateau_s0",
+  "task": "hotpotqa",
+  "model": "openai/gpt-4.1-mini",
+  "reflection_lm": "openai/gpt-4.1-mini",
+  "config": {
+    "use_merge": true,
+    "merge_algorithm": "summarize_before",
+    "merge_start": "score_plateau"
+  },
+  "test_score": 54.67,
+  "n_test": 300,
+  "status": "ok"
+}

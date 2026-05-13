@@ -1,0 +1,14 @@
+{
+  "run_dir": "runs/phase_a_main/2wiki/summarize_before_immediate_s0",
+  "task": "2wiki",
+  "model": "openai/gpt-4.1-mini",
+  "reflection_lm": "openai/gpt-4.1-mini",
+  "config": {
+    "use_merge": true,
+    "merge_algorithm": "summarize_before",
+    "merge_start": "immediate"
+  },
+  "test_score": 82.67,
+  "n_test": 300,
+  "status": "ok"
+}

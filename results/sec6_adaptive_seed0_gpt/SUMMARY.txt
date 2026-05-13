@@ -1,0 +1,17 @@
+gpt-4.1-mini × adaptive merge v2_first — SUMMARY
+Generated: 2026-05-04 02:02:26 by ruyiyang@RuyideMacBook-Air.local
+Tasks run this invocation: ifbench musique
+Key: NO_TEAM_PRIME_API_2
+
+Per-cell test scores:
+task         test_score
+----         ----------
+ifbench      50.34     
+musique      53.00     
+
+Phase A baselines for comparison (gpt-4.1-mini):
+  hotpotqa:  NoMerge=?    PA_best=?
+  ifbench:   NoMerge=?    PA_best=?
+  hover:     NoMerge=?    PA_best=?
+  musique:   NoMerge=?    PA_best=?
+  2wiki:     NoMerge=83.33   PA_best=84.33   (catastrophe cell: 54.67)

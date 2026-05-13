@@ -1,0 +1,2 @@
+run_dir,task,model,reflection_lm,config,test_score,n_test,status
+adaptive_merge/paper_final/p3/runs/qwen_hover_adaptive_s2,hover,qwen/qwen3-8b,qwen/qwen3-8b,"{'use_merge': True, 'merge_algorithm': 'original', 'merge_start': 'immediate'}",44.67,300,ok

@@ -1,0 +1,35 @@
+
+=== Reflect vs Merge per-step Δval (GPT phase-A) ===
+
+task          reflect_n merge_n   reflect_mean merge_mean   reflect_sd merge_sd   merge_zero_pct
+----------------------------------------------------------------------------------------------------
+hotpotqa           298      80        +0.0178    -0.0055       0.0760   0.0181            30.0%
+ifbench            182      36        +0.0123    -0.0005       0.0223   0.0106            22.2%
+hover              324      94        +0.0014    -0.0040       0.0224   0.0295            17.0%
+musique            276      98        +0.0207    -0.0053       0.0688   0.0133            22.4%
+2wiki              294      54        +0.0403    -0.0077       0.1033   0.0423            33.3%
+
+=== Val/Test correlation per task (GPT phase-A, n=10 cells/task) ===
+
+task            n   pearson_r
+----------------------------------------
+hover          10      +0.626
+hotpotqa       10      +0.712
+ifbench        10      +0.002
+musique        10      +0.831
+2wiki          10      +0.982
+
+
+=== LaTeX table snippet — reflect vs merge (GPT row block) ===
+hotpotqa   & $+0.018$ & $-0.006$ & 0.076 & 0.018 \\
+ifbench    & $+0.012$ & $-0.001$ & 0.022 & 0.011 \\
+hover      & $+0.001$ & $-0.004$ & 0.022 & 0.029 \\
+musique    & $+0.021$ & $-0.005$ & 0.069 & 0.013 \\
+2wiki      & $+0.040$ & $-0.008$ & 0.103 & 0.042 \\
+
+=== LaTeX table snippet — val/test r (GPT) ===
+hotpotqa   & $+0.71$ \\
+musique    & $+0.83$ \\
+ifbench    & $+0.00$ \\
+hover      & $+0.63$ \\
+2wiki      & $+0.98$ \\

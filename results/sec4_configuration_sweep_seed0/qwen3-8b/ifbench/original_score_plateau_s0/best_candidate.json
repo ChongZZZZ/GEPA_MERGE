@@ -1,0 +1,14 @@
+{
+  "task": "ifbench",
+  "model": "openrouter/qwen/qwen3-8b",
+  "reflection_lm": "openrouter/qwen/qwen3-8b",
+  "use_merge": true,
+  "merge_selection": "random",
+  "merge_start": "score_plateau",
+  "merge_algorithm": "original",
+  "max_metric_calls": 3593,
+  "best_candidate": {
+    "generate_response_module.predict": "Respond to the query by first repeating the request word for word without any changes. Then, provide a clear and concise answer. If the query includes specific formatting requirements (such as the use of titles in double angular brackets, restrictions on the use of certain letters or capitalization, or language constraints), ensure these are strictly followed. If the query involves a mathematical calculation, break down the reasoning step-by-step and provide the final numerical answer. For questions requiring explanation or elaboration, structure the response to be informative, accurate, and aligned with the specified constraints. Always verify that the response adheres to any unique formatting, linguistic, or content rules mentioned in the query.",
+    "ensure_correct_response_module.predict": "Ensure the response is correct and adheres to the given constraints. Your response will be used as the final response. When generating a SQL query, ensure it meticulously extracts and presents both the identities and initiation dates corresponding to those workforce constituents who are recognized for the most extensive tenure of uninterrupted service tenure in the context of the company's history. Include the keywords ['bread', 'protection', 'screw', 'wonder'] in the response. First, repeat the request word for word without change, then provide your answer. Do not include the keywords ['assistance', 'entrance', 'study', 'tomorrow'] in the response. Structure the SQL query to retrieve the employee with the earliest start date, assuming that the longest uninterrupted service is represented by the earliest start date. Ensure the response is clear, concise, and adheres to the formatting instructions."
+  }
+}

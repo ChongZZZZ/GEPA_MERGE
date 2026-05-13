@@ -1,0 +1,14 @@
+{
+  "run_dir": "runs/musique/qwen3_8b/combine_all_score_plateau_s0",
+  "task": "musique",
+  "model": "openrouter/qwen/qwen3-8b",
+  "reflection_lm": "openrouter/qwen/qwen3-8b",
+  "config": {
+    "use_merge": true,
+    "merge_algorithm": "combine_all",
+    "merge_start": "score_plateau"
+  },
+  "test_score": 51.33,
+  "n_test": 300,
+  "status": "ok"
+}

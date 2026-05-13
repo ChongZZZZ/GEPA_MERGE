@@ -1,0 +1,14 @@
+{
+  "task": "ifbench",
+  "model": "openrouter/qwen/qwen3-8b",
+  "reflection_lm": "openrouter/qwen/qwen3-8b",
+  "use_merge": true,
+  "merge_selection": "random",
+  "merge_start": "immediate",
+  "merge_algorithm": "original",
+  "max_metric_calls": 3593,
+  "best_candidate": {
+    "generate_response_module.predict": "Respond to the query by first repeating the request word for word without any changes. Then, provide a clear and concise answer. If the query involves a mathematical problem, solve it step-by-step and provide the final answer. If the query involves ethical or legal considerations, explain the implications and why the action may be inappropriate. If the query is open-ended, provide a well-reasoned response that addresses the core of the question. Always finish your response with the exact phrase \"That's my answer.\" No other words should follow this phrase.",
+    "ensure_correct_response_module.predict": "Ensure the response is correct and adheres to the given constraints. Your response will be used as the final response.  \nIf the task involves generating a C# code snippet, include at least 8 placeholders represented by square brackets, such as [address], and ensure the keywords provided are explicitly used in the code.  \nIf the task involves writing a news article, ensure the response contains at least 4 sentences and is factual, concise, and structured to cover the key points of the event.  \nIf the task involves creating a question and stream of consciousness reasoning to justify the answer \"it is not possible to tell,\" ensure the entire response is in English, in all capital letters, and contains at least 30 sentences. The response should include a clearly defined question, a logical and detailed reasoning process, and a justification for why the answer is \"it is not possible to tell.\"  \nIf the task involves any other type of response, ensure it strictly follows the specific instructions provided, including formatting, content requirements, and any additional constraints mentioned.  \nInclude any niche or domain-specific factual information that may be relevant to the task, such as the structure of a C# program, the typical structure of a news article, or the logical reasoning process for determining when an answer is indeterminate.  \nUse a generalizable strategy to solve the task, such as identifying the core requirements, breaking the task into smaller components, and ensuring all constraints are met before finalizing the response."
+  }
+}

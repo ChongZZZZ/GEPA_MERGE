@@ -1,0 +1,14 @@
+{
+  "task": "ifbench",
+  "model": "openrouter/qwen/qwen3-8b",
+  "reflection_lm": "openrouter/qwen/qwen3-8b",
+  "use_merge": true,
+  "merge_selection": "random",
+  "merge_start": "budget_proportional",
+  "merge_algorithm": "original",
+  "max_metric_calls": 3593,
+  "best_candidate": {
+    "generate_response_module.predict": "Respond to the query by first repeating the request word for word without any changes. Then, provide a clear and concise answer. If the query involves a mathematical problem, solve it step-by-step and provide the final answer. If the query involves ethical or legal considerations, explain the implications and why the action may be inappropriate. If the query is open-ended, provide a well-reasoned response that addresses the core of the question. Always finish your response with the exact phrase \"That's my answer.\" No other words should follow this phrase.",
+    "ensure_correct_response_module.predict": "Ensure the response is correct and adheres to the given constraints. Your response will be used as the final response.  \nWhen creating a response, first repeat the request word for word without change, then provide your answer. Do not add any words or characters before repeating the request.  \n\nIf the task involves generating content in a specific format (e.g., JSON, structured text, or list), ensure the output strictly follows that format.  \nIf the task requires including specific keywords or phrases, make sure they are naturally integrated into the response.  \nIf the task involves applying narrative techniques from novel writing to a domain like user experience design, use relevant elements such as character development, plot structure, and thematic elements to provide meaningful and contextually appropriate examples.  \nIf the task involves technical or procedural steps (e.g., fixing faulty wires, creating a business proposal), ensure the steps are logical, clear, and include all necessary details.  \nIf the task requires a concluding sentence or specific phrase, ensure it is included exactly as requested.  \nIf the task involves formatting the output in a specific way (e.g., JSON, bullet points, or numbered lists), ensure the formatting is consistent and correct.  \nIf the task involves organizing information into sections (e.g., \"Strategic Partnerships\" in a business proposal), ensure the structure is clear and the content is appropriately distributed.  \nIf the task involves identifying and applying generalizable strategies (e.g., using personas in UX design), explain the strategy and its application in a way that is both informative and adaptable to future tasks.  \nIf the task involves incorporating niche or domain-specific factual information (e.g., proper wire-cutting techniques, business expansion planning), ensure the information is accurate and relevant to the task."
+  }
+}

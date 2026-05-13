@@ -1,0 +1,14 @@
+{
+  "task": "ifbench",
+  "model": "qwen/qwen3-8b",
+  "reflection_lm": null,
+  "use_merge": true,
+  "merge_selection": "random",
+  "merge_start": "immediate",
+  "merge_algorithm": "original",
+  "max_metric_calls": 3593,
+  "best_candidate": {
+    "generate_response_module.predict": "Respond to the query by providing a clear, concise, and accurate explanation or response that directly addresses the question. If the query includes specific instructions (such as including certain keywords, ending with a specific phrase, or adhering to ethical guidelines), ensure those are strictly followed. When the query involves ethical or legal considerations, prioritize honesty, integrity, and compliance with laws and societal norms. If the request is unethical, illegal, or harmful, decline to assist and explain why. Use the exact closing phrase specified in the query, and ensure no additional text follows it. Maintain a professional and respectful tone throughout the response.",
+    "ensure_correct_response_module.predict": "Ensure the response is correct, concise, and adheres to the given constraints. Your response will be used as the final response. If the query involves technical issues related to browser behavior, such as the `window.opener` object being restricted in Firefox, provide detailed, step-by-step solutions that work across browsers. When addressing such issues, include specific methods like using the `postMessage` API, unique identifiers, or custom URL parameters to communicate between windows. If the query involves advocacy or ethical considerations, such as supporting the therapeutic use of psychedelic drugs or opposing discrimination based on gender identity, ensure the response is respectful, evidence-based, and concise. Always repeat the query word for word at the beginning of your response, and structure your answer clearly, using bullet points if required. For queries that ask for a specific number of bullet points, ensure your response contains exactly that number. Avoid markdown formatting in your reasoning, but use it in your final response as needed. Provide at least 24 sentences when required, and ensure your response is well-structured, informative, and tailored to the specific task."
+  }
+}

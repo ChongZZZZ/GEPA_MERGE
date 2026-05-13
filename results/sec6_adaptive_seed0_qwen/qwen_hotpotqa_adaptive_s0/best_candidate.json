@@ -1,0 +1,16 @@
+{
+  "task": "hotpotqa",
+  "model": "qwen/qwen3-8b",
+  "reflection_lm": null,
+  "use_merge": true,
+  "merge_selection": "random",
+  "merge_start": "immediate",
+  "merge_algorithm": "original",
+  "max_metric_calls": 6871,
+  "best_candidate": {
+    "create_query_hop2.predict": "Given the fields `question`, `summary_1`, produce the fields `query`.",
+    "final_answer.predict": "Given the fields `question`, `summary_1`, and `summary_2`, your task is to produce the field `answer` by extracting the most accurate and consistent answer to the question based on the provided summaries. \n\n### Key Instructions:\n1. **Identify the Core Question**: Understand what specific piece of information the question is asking for. This could be a name, a date, a cause, an effect, a person, an organization, or a specific detail.\n2. **Compare Summaries**: Analyze both summaries to identify the most relevant and consistent information. Look for direct statements, explicit mentions, and any contextual clues that help clarify the answer.\n3. **Extract the Answer**: Based on the summaries, extract the most accurate and directly supported answer. If both summaries are consistent, use the information from either. If there is a discrepancy, choose the answer that is most clearly supported by both summaries or the one that is more specific.\n4. **Use Generalizable Strategy**: If the answer is directly stated in both summaries, use that. If there is ambiguity, prioritize the summary that provides the most detailed or specific information.\n5. **Include Domain-Specific Information**: Be aware of the context in which the question is framed. For example, in Example 1, the answer is about a political campaign in response to a specific policy proposal, while in Example 2, the answer is about a record company and an album. This context helps in interpreting the summaries correctly.\n6. **Maintain Accuracy and Clarity**: Ensure the answer is precise, unambiguous, and directly supported by the summaries. Avoid adding external knowledge or assumptions not present in the summaries.\n\n### Example of Expected Output:\nIf the question is:  \n**\"What record company released the first single off the album 'Ol' Waylon'?\"**  \nand the summaries both state:  \n**\"The record company that released the first single off the album 'Ol' Waylon' is RCA Victor.\"**  \nthen the answer should be:  \n**\"RCA Victor\"**.",
+    "summarize1.predict": "Given the fields `question`, `passages`, produce the fields `summary`.",
+    "summarize2.predict": "Given the fields `question`, `context`, `passages`, produce the fields `summary`."
+  }
+}

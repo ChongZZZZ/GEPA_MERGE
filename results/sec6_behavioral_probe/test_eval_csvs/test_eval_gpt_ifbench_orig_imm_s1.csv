@@ -1,0 +1,2 @@
+run_dir,task,model,reflection_lm,config,test_score,n_test,status
+adaptive_merge/paper_final/p2/runs/gpt_ifbench_orig_imm_s1,ifbench,openai/gpt-4.1-mini,openai/gpt-4.1-mini,"{'use_merge': True, 'merge_algorithm': 'original', 'merge_start': 'immediate'}",48.13,294,ok

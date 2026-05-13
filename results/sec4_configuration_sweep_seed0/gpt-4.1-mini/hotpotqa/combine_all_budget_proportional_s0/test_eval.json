@@ -1,0 +1,14 @@
+{
+  "run_dir": "P2_result/phase_a_main/hotpotqa/combine_all_budget_proportional_s0",
+  "task": "hotpotqa",
+  "model": "openai/gpt-4.1-mini",
+  "reflection_lm": "openai/gpt-4.1-mini",
+  "config": {
+    "use_merge": true,
+    "merge_algorithm": "combine_all",
+    "merge_start": "budget_proportional"
+  },
+  "test_score": 57.33,
+  "n_test": 300,
+  "status": "ok"
+}

@@ -1,0 +1,14 @@
+{
+  "run_dir": "adaptive_merge/runs_phase_a_seed1/qwen_hotpotqa_orig_plat_s1",
+  "task": "hotpotqa",
+  "model": "qwen/qwen3-8b",
+  "reflection_lm": "qwen/qwen3-8b",
+  "config": {
+    "use_merge": true,
+    "merge_algorithm": "original",
+    "merge_start": "score_plateau"
+  },
+  "test_score": 54.0,
+  "n_test": 300,
+  "status": "ok"
+}

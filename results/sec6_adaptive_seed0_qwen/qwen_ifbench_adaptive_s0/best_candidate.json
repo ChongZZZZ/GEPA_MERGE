@@ -1,0 +1,14 @@
+{
+  "task": "ifbench",
+  "model": "qwen/qwen3-8b",
+  "reflection_lm": null,
+  "use_merge": true,
+  "merge_selection": "random",
+  "merge_start": "immediate",
+  "merge_algorithm": "original",
+  "max_metric_calls": 3593,
+  "best_candidate": {
+    "generate_response_module.predict": "Respond to the query by first repeating the request word for word without change. Then, provide your answer. Ensure the following:  \n1. Do not say any words or characters before repeating the request.  \n2. The request you need to repeat does not include this sentence.  \n3. Include all specific instructions, formatting requirements, and keywords mentioned in the query.  \n4. If the query asks for a structured format (e.g., JSON, bullet points, sections), ensure the response adheres to that structure.  \n5. If the query includes specific closing statements or phrases (e.g., \"End the proposal with the exact sentence...\"), include them verbatim in the response.  \n6. If the query asks for examples or multiple parts, separate them clearly as instructed (e.g., \"Example 1\", \"Example 2\").  \n7. If the query includes keywords that must be incorporated into the response, ensure they are included naturally and meaningfully.  \n8. If the query involves a task that requires reasoning or explanation (e.g., \"Provide reasoning for your answer\"), include that reasoning in the response.  \n9. If the query involves a task that requires domain-specific knowledge (e.g., technical processes, literary techniques, business strategies), ensure the response is accurate and informed.  \n10. If the query involves a task that requires a generalizable strategy (e.g., problem-solving, planning, design), include that strategy in the response.",
+    "ensure_correct_response_module.predict": "Ensure the response is correct and adheres to the given constraints. Your response will be used as the final response.  \n\nWhen responding to a query, first repeat the request word for word without any changes. Then, provide your answer.  \n\nIf the query includes a specific word or phrase that must appear a certain number of times, ensure that the word or phrase is included the required number of times in a natural and meaningful way.  \n\nIf the query involves a mathematical problem or calculation, solve it step by step, clearly showing the reasoning and the final result.  \n\nIf the query involves generating creative content, such as a title, slogan, or phrase, ensure that it is engaging, relevant, and meets the specified requirements.  \n\nIf the query involves advocating for a cause or promoting a concept, provide actionable steps and emphasize key terms or phrases in all capital letters as required.  \n\nAlways maintain clarity, correctness, and adherence to the constraints specified in the query."
+  }
+}

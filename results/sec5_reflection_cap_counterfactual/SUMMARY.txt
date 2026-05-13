@@ -1,0 +1,16 @@
+v3_reflect_capped (max_tokens=2000) — qwen3-8b — SUMMARY
+Generated: 2026-05-03 06:44:29
+
+Task scores (compare against NoMerge / v2_first / PA-best):
+task         test_score  
+musique      50.00       
+
+Reference (qwen3-8b, seed=0):
+  NoMerge:       hotpotqa=55.00  ifbench=31.97  hover=47.67  musique=48.33
+  v2_first:      hotpotqa=51.00  ifbench=35.54  hover=43.00  musique=51.67
+  PA best:       hotpotqa=56.33  ifbench=36.22  hover=50.67  musique=52.33
+
+Hypothesis test:
+  IF reflect cap UNSTUCKS hotpotqa or hover (>NoMerge) → §6 reflective-LM lever VALIDATED
+  IF scores stay similar to v2_first → 2/4 ceiling is structural beyond inflation control
+  IF ifbench/musique LOSE → reflect inflation IS the lever (cap removed it)

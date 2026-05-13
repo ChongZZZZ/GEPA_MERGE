@@ -1,0 +1,56 @@
+# Behavioral Probe (§6) — combined SUMMARY
+# Aggregated from former p1, p2, p3, p4 owner folders.
+
+## from p1
+P1 multi-seed bundle — SUMMARY
+Generated: <date> by <host>
+Cells run this invocation: 14
+Keys used: <redacted>
+
+cell                                test_score
+----                                ----------
+gpt_hover_nomerge_s1                48.67     
+gpt_hover_nomerge_s2                45.33     
+gpt_hover_orig_imm_s1               49.67     
+gpt_hover_orig_imm_s2               47.00     
+gpt_hover_adaptive_s1               50.33     
+gpt_hover_adaptive_s2               50.33     
+gpt_musique_nomerge_s1              42.67     
+gpt_musique_nomerge_s2              50.33     
+gpt_musique_orig_imm_s1             56.67     
+gpt_musique_orig_imm_s2             50.00     
+gpt_musique_adaptive_s1             44.33     
+gpt_musique_adaptive_s2             56.67     
+gpt_2wiki_adaptive_s1               84.00     
+gpt_2wiki_adaptive_s2               69.67     
+
+## from p3
+P3 multi-seed bundle — SUMMARY
+Generated: <date> by <host>
+Cells run this invocation: 8
+
+cell                                     test_score
+----                                     ----------
+qwen_hover_adaptive_s1                   MISSING   
+qwen_hover_adaptive_s2                   44.67     
+qwen_ifbench_adaptive_s1                 MISSING   
+qwen_ifbench_adaptive_s2                 34.52     
+qwen_ifbench_combine_imm_s2              31.12     
+qwen_2wiki_nomerge_s0                    73.67     
+qwen_2wiki_nomerge_s1                    83.67     
+qwen_2wiki_nomerge_s2                    80.00     
+
+## from p4
+P4 multi-seed bundle — SUMMARY
+Generated: <date> by <host>
+Cells run this invocation: 6
+
+cell                                     test_score
+----                                     ----------
+qwen_hotpotqa_adaptive_s1                43.33     
+qwen_hotpotqa_adaptive_s2                48.67     
+qwen_musique_adaptive_s1                 49.33     
+qwen_musique_adaptive_s2                 48.00     
+qwen_2wiki_orig_bp_s1                    76.67     
+qwen_2wiki_orig_bp_s2                    81.33     
+

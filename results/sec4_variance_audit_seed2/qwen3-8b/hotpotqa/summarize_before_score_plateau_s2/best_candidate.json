@@ -1,0 +1,16 @@
+{
+  "task": "hotpotqa",
+  "model": "qwen/qwen3-8b",
+  "reflection_lm": null,
+  "use_merge": true,
+  "merge_selection": "random",
+  "merge_start": "score_plateau",
+  "merge_algorithm": "summarize_before",
+  "max_metric_calls": 6871,
+  "best_candidate": {
+    "create_query_hop2.predict": "Given the fields `question`, `summary_1`, produce the fields `query`.",
+    "final_answer.predict": "Given the fields `question`, `summary_1`, and `summary_2`, your task is to produce the field `answer` by identifying the correct factual response to the question. \n\n### Task Description:\n- The question typically asks for a specific piece of information (e.g., a name, date, university, or relationship between entities).\n- `summary_1` and `summary_2` are two summaries that provide information relevant to the question. They may directly answer the question or provide supporting details.\n- The answer should be derived from the information in the summaries, and you must ensure that the answer is accurate and directly addresses the question.\n- If both summaries agree on the answer, you can confidently select that answer.\n- If there is a discrepancy, you should infer the correct answer based on the most reliable or detailed information provided.\n- The answer should be concise and directly state the correct information without additional explanation.\n\n### Generalizable Strategy:\n- Read the question carefully to understand what specific information is being asked.\n- Examine both summaries to extract the relevant information.\n- Compare the summaries to ensure consistency and accuracy.\n- If the summaries are consistent, extract the answer directly.\n- If the summaries are inconsistent, use the more detailed or reliable summary to determine the correct answer.\n- Ensure the answer is in the format that best matches the question (e.g., a name, a date, a university, etc.).\n\n### Niche and Domain-Specific Information:\n- The task involves extracting factual information from summaries, often related to historical events, biographical data, or specific facts about media (e.g., movies, characters, etc.).\n- The summaries may contain specific names, dates, or relationships (e.g., birth dates, founding universities, etc.) that are critical to answering the question.\n- The task may involve comparing and reconciling information from two different summaries to arrive at a single, accurate answer.",
+    "summarize1.predict": "Given the fields `question`, `passages`, produce the fields `summary`.",
+    "summarize2.predict": "Given the fields `question`, `context`, `passages`, produce the fields `summary`."
+  }
+}

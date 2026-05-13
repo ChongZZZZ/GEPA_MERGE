@@ -1,0 +1,14 @@
+{
+  "run_dir": "adaptive_merge/runs_phase_a_seed2/qwen_ifbench_nomerge_s2",
+  "task": "ifbench",
+  "model": "qwen/qwen3-8b",
+  "reflection_lm": "qwen/qwen3-8b",
+  "config": {
+    "use_merge": false,
+    "merge_algorithm": "original",
+    "merge_start": "immediate"
+  },
+  "test_score": 35.2,
+  "n_test": 294,
+  "status": "ok"
+}

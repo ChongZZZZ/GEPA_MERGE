@@ -1,0 +1,14 @@
+{
+  "run_dir": "P3_result/phase_a_main/ifbench/nomerge_s0",
+  "task": "ifbench",
+  "model": "openrouter/qwen/qwen3-8b",
+  "reflection_lm": "openrouter/qwen/qwen3-8b",
+  "config": {
+    "use_merge": false,
+    "merge_algorithm": "original",
+    "merge_start": "immediate"
+  },
+  "test_score": 31.97,
+  "n_test": 294,
+  "status": "ok"
+}

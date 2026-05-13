@@ -1,0 +1,14 @@
+{
+  "run_dir": "P2_result/phase_a_main/ifbench/summarize_before_score_plateau_s0",
+  "task": "ifbench",
+  "model": "openai/gpt-4.1-mini",
+  "reflection_lm": "openai/gpt-4.1-mini",
+  "config": {
+    "use_merge": true,
+    "merge_algorithm": "summarize_before",
+    "merge_start": "score_plateau"
+  },
+  "test_score": 46.94,
+  "n_test": 294,
+  "status": "ok"
+}

@@ -1,0 +1,14 @@
+{
+  "run_dir": "runs/phase_a_main_qwen/2wiki/nomerge_s0",
+  "task": "2wiki",
+  "model": "qwen/qwen3-8b",
+  "reflection_lm": "qwen/qwen3-8b",
+  "config": {
+    "use_merge": false,
+    "merge_algorithm": "original",
+    "merge_start": "immediate"
+  },
+  "test_score": 84.0,
+  "n_test": 300,
+  "status": "ok"
+}

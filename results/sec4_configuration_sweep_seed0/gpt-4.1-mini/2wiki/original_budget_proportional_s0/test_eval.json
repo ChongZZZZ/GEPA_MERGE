@@ -1,0 +1,14 @@
+{
+  "run_dir": "runs/phase_a_main/2wiki/original_budget_proportional_s0",
+  "task": "2wiki",
+  "model": "openai/gpt-4.1-mini",
+  "reflection_lm": "openai/gpt-4.1-mini",
+  "config": {
+    "use_merge": true,
+    "merge_algorithm": "original",
+    "merge_start": "budget_proportional"
+  },
+  "test_score": 83.67,
+  "n_test": 300,
+  "status": "ok"
+}

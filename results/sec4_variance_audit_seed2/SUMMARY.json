@@ -1,0 +1,53 @@
+{
+  "seed": 2,
+  "rows": [
+    {
+      "task": "ifbench",
+      "cfg": "nomerge",
+      "seed": 2,
+      "score": 35.2,
+      "s0_ref": 31.97,
+      "delta": 3.230000000000004
+    },
+    {
+      "task": "ifbench",
+      "cfg": "orig_imm",
+      "seed": 2,
+      "score": 32.31,
+      "s0_ref": 31.29,
+      "delta": 1.0200000000000031
+    },
+    {
+      "task": "ifbench",
+      "cfg": "combine_bp",
+      "seed": 2,
+      "score": 30.61,
+      "s0_ref": 36.22,
+      "delta": -5.609999999999999
+    },
+    {
+      "task": "musique",
+      "cfg": "nomerge",
+      "seed": 2,
+      "score": 41.67,
+      "s0_ref": 48.33,
+      "delta": -6.659999999999997
+    },
+    {
+      "task": "musique",
+      "cfg": "orig_imm",
+      "seed": 2,
+      "score": 49.33,
+      "s0_ref": 48.33,
+      "delta": 1.0
+    },
+    {
+      "task": "musique",
+      "cfg": "sum_imm",
+      "seed": 2,
+      "score": 44.67,
+      "s0_ref": 52.33,
+      "delta": -7.659999999999997
+    }
+  ]
+}

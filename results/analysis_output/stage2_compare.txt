@@ -1,0 +1,71 @@
+==========================================================================================
+2.1  Δval distribution per task × origin (with bootstrap 95% CI + Mann-Whitney U)
+==========================================================================================
+task       origin      n      mean               CI 95%   median   %pos  %zero   %neg
+  hotpotqa reflect   147   -0.0045 [-0.0119, +0.0033]    -0.0033   37%     8%    54%
+  hotpotqa merge      37   -0.0081 [-0.0168, +0.0001]    -0.0067   27%    14%    59%
+  → Mann-Whitney U (reflect vs merge): p=0.7728     
+
+  ifbench  reflect    85   +0.0394 [+0.0230, +0.0548]    +0.0425   60%     0%    40%
+  ifbench  merge      22   +0.0085 [-0.0009, +0.0177]    +0.0003   50%    32%    18%
+  → Mann-Whitney U (reflect vs merge): p=0.1165     
+
+  hover    reflect   153   +0.0200 [+0.0157, +0.0243]    +0.0200   71%     4%    25%
+  hover    merge      55   +0.0153 [+0.0107, +0.0202]    +0.0133   69%    16%    15%
+  → Mann-Whitney U (reflect vs merge): p=0.3253     
+
+  musique  reflect   138   +0.0178 [+0.0099, +0.0263]    +0.0033   54%     5%    41%
+  musique  merge      48   +0.0010 [-0.0032, +0.0051]    +0.0000   40%    25%    35%
+  → Mann-Whitney U (reflect vs merge): p=0.2007     
+
+  2wiki    reflect   138   +0.0454 [+0.0257, +0.0668]    +0.0000   47%     7%    46%
+  2wiki    merge      39   -0.0108 [-0.0181, -0.0045]    +0.0000   31%    21%    49%
+  → Mann-Whitney U (reflect vs merge): p=0.0232  ★ 
+
+==========================================================================================
+2.2  Merge Δval split by algorithm (original / combine_all / summarize_before)
+==========================================================================================
+task       algo                  n    mean Δval   median   %pos  %zero   %neg
+  hotpotqa original             12      +0.0044  +0.0000   33%    42%    25%
+  hotpotqa combine_all          13      -0.0123  -0.0100   15%     0%    85%
+  hotpotqa summarize_before     12      -0.0161  -0.0100   33%     0%    67%
+  ifbench  original              9      +0.0056  +0.0000   22%    78%     0%
+  ifbench  combine_all           6      +0.0170  +0.0158   67%     0%    33%
+  ifbench  summarize_before      7      +0.0049  +0.0075   71%     0%    29%
+  hover    original             18      +0.0150  +0.0100   56%    39%     6%
+  hover    combine_all          18      +0.0150  +0.0233   72%     0%    28%
+  hover    summarize_before     19      +0.0160  +0.0133   79%    11%    11%
+  musique  original             16      +0.0021  +0.0000   12%    69%    19%
+  musique  combine_all          16      +0.0029  +0.0067   56%     6%    38%
+  musique  summarize_before     16      -0.0021  +0.0000   50%     0%    50%
+  2wiki    original             17      -0.0035  +0.0000   35%    41%    24%
+  2wiki    combine_all           8      -0.0075  -0.0100   25%    12%    62%
+  2wiki    summarize_before     14      -0.0214  -0.0117   29%     0%    71%
+
+==========================================================================================
+2.3  Δlength + instruction-keyword growth per step, by origin
+==========================================================================================
+
+  origin   metric               n      mean   median
+  reflect  Δchars             661     +2437    +1750
+  reflect  Δbullets           523     +6.98       +7
+  reflect  Δif_clauses        523     +4.96       +2
+  reflect  Δwhen_clauses      523     +3.09       +0
+  reflect  Δmust_clauses      523     +0.18       +0
+  reflect  Δensure_clauses    523     +7.45       +1
+  reflect  Δshould_clauses    523     +3.23       +1
+
+  merge    Δchars             201     +1135    +1433
+  merge    Δbullets           162     +3.93       +3
+  merge    Δif_clauses        162     +1.12       +0
+  merge    Δwhen_clauses      162     -1.02       +0
+  merge    Δmust_clauses      162     +0.00       +0
+  merge    Δensure_clauses    162     -1.10       +0
+  merge    Δshould_clauses    162     -0.49       +0
+
+==========================================================================================
+2.4  Efficiency: val_gain per metric_call (mc_at_disc difference)
+==========================================================================================
+  origin       n  mean cost  mean Δval   val/cost x1000
+  reflect    661     1592.3    +0.0219          +0.0137
+  merge      201      905.5    +0.0018          +0.0020

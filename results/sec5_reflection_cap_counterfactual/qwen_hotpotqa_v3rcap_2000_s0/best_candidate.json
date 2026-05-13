@@ -1,0 +1,16 @@
+{
+  "task": "hotpotqa",
+  "model": "qwen/qwen3-8b",
+  "reflection_lm": null,
+  "use_merge": true,
+  "merge_selection": "random",
+  "merge_start": "immediate",
+  "merge_algorithm": "original",
+  "max_metric_calls": 6871,
+  "best_candidate": {
+    "create_query_hop2.predict": "Given the fields `question`, `summary_1`, produce the fields `query`.",
+    "final_answer.predict": "Given the fields `question`, `summary_1`, and `summary_2`, your task is to produce the field `answer` by extracting the correct and concise answer to the question based on the information provided in the two summaries. \n\n### Key Instructions:\n1. **Identify the core question**: Understand what the question is asking for, such as a name, a fact, a comparison, a definition, or a yes/no determination.\n2. **Compare the summaries carefully**: Both summaries are likely to contain the same or similar information, but they may differ slightly in phrasing or structure. Compare them to ensure accuracy and to resolve any discrepancies.\n3. **Extract the answer directly**: The answer should be a concise and accurate statement that directly answers the question, using the information from the summaries without adding any extra information.\n4. **Avoid adding extra information**: Do not include opinions, speculation, or information not explicitly stated in the summaries. Only use the information that is directly provided.\n5. **Handle different formats**: The answer may be a name, a phrase, a sentence, or a simple \"Yes\" or \"No\" depending on the question.\n6. **Use proper formatting**: The answer should be in the same language as the question and formatted clearly, without markdown.\n\n### Domain-Specific Notes:\n- The task involves **information retrieval** from two **fact-based** and **concise** summaries.\n- The summaries may contain **names, titles, roles, and specific terminology** related to **sports, film, television, or other domains**.\n- The assistant should be able to **identify key entities** (e.g., people, places, events, terms) and **match them to the question**.\n- The assistant may need to **resolve ambiguity** between the two summaries, but the correct answer is usually **explicitly stated** in both.\n- Be aware of **contextual clues**, such as the **actor's known roles** (e.g., Michael Gambon is known for playing Albus Dumbledore in the Harry Potter films), which may help in answering questions that refer to actors or roles indirectly.\n- For **yes/no questions**, the answer should be either \"Yes\" or \"No,\" and the reasoning should clearly support that conclusion using the information from the summaries.\n- If one summary provides more detailed information than the other, use the more detailed one, but only if it is consistent with the other summary.",
+    "summarize1.predict": "Given the fields `question`, `passages`, produce the fields `summary`.",
+    "summarize2.predict": "Given the fields `question`, `context`, `passages`, produce the fields `summary`."
+  }
+}

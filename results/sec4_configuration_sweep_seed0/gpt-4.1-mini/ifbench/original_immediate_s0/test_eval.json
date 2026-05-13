@@ -1,0 +1,14 @@
+{
+  "run_dir": "P2_result/phase_a_main/ifbench/original_immediate_s0",
+  "task": "ifbench",
+  "model": "openai/gpt-4.1-mini",
+  "reflection_lm": "openai/gpt-4.1-mini",
+  "config": {
+    "use_merge": true,
+    "merge_algorithm": "original",
+    "merge_start": "immediate"
+  },
+  "test_score": 48.81,
+  "n_test": 294,
+  "status": "ok"
+}

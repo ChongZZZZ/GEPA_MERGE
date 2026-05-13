@@ -1,0 +1,14 @@
+{
+  "run_dir": "P2_result/phase_a_main/ifbench/combine_all_budget_proportional_s0",
+  "task": "ifbench",
+  "model": "openai/gpt-4.1-mini",
+  "reflection_lm": "openai/gpt-4.1-mini",
+  "config": {
+    "use_merge": true,
+    "merge_algorithm": "combine_all",
+    "merge_start": "budget_proportional"
+  },
+  "test_score": 50.85,
+  "n_test": 294,
+  "status": "ok"
+}

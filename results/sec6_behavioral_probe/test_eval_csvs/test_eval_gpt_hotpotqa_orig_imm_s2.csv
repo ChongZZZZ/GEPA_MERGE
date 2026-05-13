@@ -1,0 +1,2 @@
+run_dir,task,model,reflection_lm,config,test_score,n_test,status
+adaptive_merge/paper_final/p2/runs/gpt_hotpotqa_orig_imm_s2,hotpotqa,openai/gpt-4.1-mini,openai/gpt-4.1-mini,"{'use_merge': True, 'merge_algorithm': 'original', 'merge_start': 'immediate'}",54.0,300,ok
