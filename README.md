@@ -37,34 +37,29 @@ gepa_submit/
 
 ### `results/` — organized by paper section
 
-| Folder | Contents | Paper reference |
-|---|---|---|
-| `sec4_configuration_sweep_seed0/<model>/<task>/<cell>/` | Configuration sweep: 3 operators × 3 timings + NoMerge × 5 tasks × 2 models. Top-level split by model (`gpt-4.1-mini/`, `qwen3-8b/`), then task, then cell. Single seed. | §4.2, Figure 3 |
-| `sec4_variance_audit_seed{1,2}/qwen3-8b/<task>/<cell>/` | Qwen NoMerge + selected merge cells re-run at seed 1 and seed 2. Same `<model>/<task>/<cell>/` layout as the sweep. | §4.4, Table 3 |
-| `sec5_reflection_cap_counterfactual/` | Qwen runs with reflection LM capped at 2000 output tokens | §5.2 |
-| `sec6_behavioral_probe/<model>/<task>/<cell>/` | Multi-seed behavioral-probe runs (the locked four-layer policy). Mostly `adaptive_s{1,2}` cells; plus a handful of probe-wave companions (`nomerge_s0`, `original_budget_proportional_s{1,2}`, `combine_all_immediate_s2`) that were launched in the same wave. CSV snapshots of every test eval live in `sec6_behavioral_probe/test_eval_csvs/`. | §6.2, Figure 4, Table 7 |
-| `sec6_adaptive_seed0_gpt/` | GPT seed-0 adaptive runs (the s=0 column of Table 7) | §6.2 |
-| `sec6_adaptive_seed0_qwen/` | Qwen seed-0 adaptive runs — 5 tasks (`hotpotqa, hover, ifbench, musique, 2wiki`) | §6.2 |
-| `replay/` | Adaptive-replay sensitivity sweep over thresholds (`summary.md` + 5 thresholds under `threshold_sweep/`) | §6 design notes |
-| `test_score_aggregates/` | Long-form test-score CSVs aggregating per-cell `test_eval.json` files (input to the timing analysis) | §4 |
-| `analysis_output/` | **Outputs of the analysis scripts run against `results/`** | §4 / §5 / §6 |
+Each run dir contains `best_candidate.json`, `gepa_state.bin`, `merge_quality.jsonl`, and `test_eval.json` (300-example held-out test score).
 
-Each run directory under those folders contains:
-- `best_candidate.json` — highest-validation prompt set;
-- `gepa_state.bin` — full optimization state (Pareto frontier, lineage);
-- `merge_quality.jsonl` — per-merge diagnostic record;
-- `test_eval.json` — held-out 300-example test score.
+| Folder | Paper ref |
+|---|---|
+| `sec4_configuration_sweep_seed0/<model>/<task>/<cell>/` — 3 operators × 3 timings + NoMerge, single seed | §4.2, Fig 3 |
+| `sec4_variance_audit_seed{1,2}/<model>/<task>/<cell>/` — multi-seed NoMerge + selected merge re-runs | §4.4, Tab 3 |
+| `sec5_reflection_cap_counterfactual/` — Qwen runs with reflection LM capped at 2000 tokens | §5.2 |
+| `sec6_behavioral_probe/<model>/<task>/<cell>/` — locked four-layer probe (adaptive\_s{1,2} + probe-wave companions); CSV mirrors in `test_eval_csvs/` | §6.2, Fig 4, Tab 7 |
+| `sec6_adaptive_seed0_{gpt,qwen}/` — s=0 adaptive runs (s=0 column of Tab 7) | §6.2 |
+| `replay/` — adaptive-replay sensitivity sweep over thresholds | §6 |
+| `test_score_aggregates/` — long-form aggregate CSVs (input to timing analysis) | §4 |
+| `analysis_output/` — **outputs of the analysis scripts** (see below) | §4 – §6 |
 
-### `results/analysis_output/` — what's in there
+### `results/analysis_output/`
 
-| File | What it is | Maps to |
-|---|---|---|
-| `variance_summary.txt` | Per-(model, task, config, seed) test score and within-seed Δ vs NoMerge, plus mean and sample std | Figure 4 + Table 7 |
-| `compute_gpt_stats.txt` | Per-step Δval for reflect vs merge; per-task val/test Pearson correlation | Table 4 + Table 5 |
-| `stage2_compare.txt` | Reflect-vs-merge Δval distribution per task with Mann-Whitney U p-values | §5.2 supplement |
-| `cell_timing.csv` | Per-cell merge timing (first/last/density) joined with test score and NoMerge lift; severity flag for `bad` / `catastrophic` cells | §4.3 catastrophe table |
-| `logistic_acc_vs_rej.csv` | Five nested logistic models predicting merge accept/reject (lexical → +lineage → +semantic → +judge → sanity-check with subsample) | §5.1 |
-| `forensics_v2/`, `forensics_v3/` | Intermediate per-merge feature CSVs (judge scores, recovered rejected prompts, accepted vs rejected metrics) | §5.1 inputs |
+| File | Maps to |
+|---|---|
+| `variance_summary.txt` — per-(model, task, config, seed) test scores + within-seed Δ vs NoMerge, mean, sample σ | Fig 4 + Tab 7 |
+| `compute_gpt_stats.txt` — reflect-vs-merge per-step Δval; val/test Pearson r | Tab 4 + Tab 5 |
+| `stage2_compare.txt` — reflect-vs-merge Δval distribution, Mann-Whitney U | §5.2 supp |
+| `cell_timing.csv` — per-cell merge timing + NoMerge lift + severity flag | §4.3 |
+| `logistic_acc_vs_rej.csv` — 5 nested logistic models predicting accept/reject | §5.1 |
+| `forensics_v{2,3}/` — intermediate per-merge feature CSVs (judge scores, recovered rejected prompts) | §5.1 inputs |
 
 The vendored Wiki BM25 corpus and retriever caches inside `experiments/vendor/gepa-artifact/gepa_artifact/benchmarks/hover/` are kept as symlinks (`wiki.abstracts.2017.jsonl`, `bm25s_retriever/`, `retriever_cache/`) because they total ~3.5 GB. On a fresh machine they're regenerated by `experiments/warmup_wiki_corpus.py`.
 
